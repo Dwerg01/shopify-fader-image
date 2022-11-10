@@ -1,0 +1,121 @@
+<style>
+    .product-values{
+      margin: 20px 0;
+    }
+    .product-values p{
+      font-size: 60%;
+    }
+    .product-values .product-value--content{
+      position: relative;
+      margin-bottom: 20px;
+    }
+    .product-values .product-value--content > div{
+      -webkit-transition: all 300ms ease-in-out;
+      -moz-transition: all 300ms ease-in-out;
+      -ms-transition: all 300ms ease-in-out;
+      -o-transition: all 300ms ease-in-out;
+      transition: all 300ms ease-in-out;
+    }
+    .product-values .product-value--content:hover .default{
+      opacity: 0;
+    }
+    .product-values .product-value--content:hover .hover{
+      opacity: 1;
+    }
+    .product-values .product-value--content .hover{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+    .product-values .product-value--content .hover p{
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      display: block;
+    }
+    @media screen and (max-width: 991px) and (orientation: landscape){
+      .product-values .grid .grid__item{
+        width: 20%;
+      }
+    }
+    @media screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait){
+      .product-values .grid .grid__item{
+        width: 20%;
+      }
+    }
+    
+    </style>
+    <div class="product-values">
+      <div class="grid">
+      
+        <div class="grid__item small--one-third medium-up--one-fifth ">
+          <div class="product-value--content text-center">
+            <div class="default">
+              <img src="//cdn.shopify.com/s/files/1/0792/4197/files/1_22995c34-500d-495f-b7cc-5b6ad1c9e65a.png?v=1614305960" alt="" />
+              <p></p>
+            </div>
+            <div class="hover"><p>DRY CLEANING INCLUDED</p></div>
+          </div>
+        </div>
+      
+        <div class="grid__item small--one-third medium-up--one-fifth ">
+          <div class="product-value--content text-center">
+            <div class="default">
+              <img src="//cdn.shopify.com/s/files/1/0792/4197/files/2_50e309e8-47e8-4516-a8aa-10d8da4aa118.png?v=1614305960" alt="" />
+              <p></p>
+            </div>
+            <div class="hover"><p>BOUTIQUE TRY-ONS</p></div>
+          </div>
+        </div>
+      
+        <div class="grid__item small--one-third medium-up--one-fifth ">
+          <div class="product-value--content text-center">
+            <div class="default">
+              <img src="//cdn.shopify.com/s/files/1/0792/4197/files/3_a36532b4-df25-423a-a457-b2014d142f2e.png?v=1614305960" alt="" />
+              <p></p>
+            </div>
+            <div class="hover"><p>BACKUP DRESS OPTION</p></div>
+          </div>
+        </div>
+      
+        <div class="grid__item small--one-third medium-up--one-fifth ">
+          <div class="product-value--content text-center">
+            <div class="default">
+              <img src="//cdn.shopify.com/s/files/1/0792/4197/files/4_c1cc6a67-aed5-4822-ab41-e5f0f81d0552.png?v=1614305960" alt="" />
+              <p></p>
+            </div>
+            <div class="hover"><p>RETURN IF IT DOESN'T FIT</p></div>
+          </div>
+        </div>
+      
+        <div class="grid__item small--one-third medium-up--one-fifth ">
+          <div class="product-value--content text-center">
+            <div class="default">
+              <img src="//cdn.shopify.com/s/files/1/0792/4197/files/5_aec1a47a-102f-41bc-a879-dd6a01bf3b35.png?v=1614305960" alt="" />
+              <p></p>
+            </div>
+            <div class="hover"><p>EASY & SAFE PAYMENT</p></div>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    <script>
+      var valuesGrid = document.querySelectorAll('.product-values .product-value--content');
+      var height = 0;
+      if(valuesGrid.length > 1){
+        setTimeout(function(){
+          valuesGrid.forEach(function(item, i){
+            if(height < item.offsetHeight){
+              height = item.offsetHeight;
+            }
+          });
+          valuesGrid.forEach(function(item, i){
+            item.style.height = height + 'px';
+          });
+        }, 100);    
+      }
+    </script>
