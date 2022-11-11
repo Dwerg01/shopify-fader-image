@@ -1,4 +1,4 @@
-<style>
+<!-- <style>
     .product-values{
       margin: 20px 0;
     }
@@ -47,14 +47,16 @@
       }
     }
     
-    </style>
+    </style> -->
+
+{{ 'fader_icons.css' | asset_url | }}
     <div class="product-values">
       <div class="grid">
       
         <div class="grid__item small--one-third medium-up--one-fifth ">
           <div class="product-value--content text-center">
             <div class="default">
-              <img src="//cdn.shopify.com/s/files/1/0792/4197/files/1_22995c34-500d-495f-b7cc-5b6ad1c9e65a.png?v=1614305960" alt="" />
+              <img src="{{ 'icon-bkup.png' | asset_url }}" alt="" />
               <p></p>
             </div>
             <div class="hover"><p>DRY CLEANING INCLUDED</p></div>
@@ -64,7 +66,7 @@
         <div class="grid__item small--one-third medium-up--one-fifth ">
           <div class="product-value--content text-center">
             <div class="default">
-              <img src="//cdn.shopify.com/s/files/1/0792/4197/files/2_50e309e8-47e8-4516-a8aa-10d8da4aa118.png?v=1614305960" alt="" />
+              <img src="{{ 'icon-pay.png' | asset_url }}" alt="Try any dress at reduced cost for a day *valid Monday" />
               <p></p>
             </div>
             <div class="hover"><p>BOUTIQUE TRY-ONS</p></div>
@@ -74,7 +76,7 @@
         <div class="grid__item small--one-third medium-up--one-fifth ">
           <div class="product-value--content text-center">
             <div class="default">
-              <img src="//cdn.shopify.com/s/files/1/0792/4197/files/3_a36532b4-df25-423a-a457-b2014d142f2e.png?v=1614305960" alt="" />
+              <img src="{{ 'icon-deliver.png' | asset_url }}" alt="BACKUP DRESS OPTION" />
               <p></p>
             </div>
             <div class="hover"><p>BACKUP DRESS OPTION</p></div>
@@ -84,7 +86,7 @@
         <div class="grid__item small--one-third medium-up--one-fifth ">
           <div class="product-value--content text-center">
             <div class="default">
-              <img src="//cdn.shopify.com/s/files/1/0792/4197/files/4_c1cc6a67-aed5-4822-ab41-e5f0f81d0552.png?v=1614305960" alt="" />
+              <img src="{{ 'icon-return.png' | asset_url }}" alt="RETURN IF IT DOESN'T FIT" />
               <p></p>
             </div>
             <div class="hover"><p>RETURN IF IT DOESN'T FIT</p></div>
@@ -94,7 +96,7 @@
         <div class="grid__item small--one-third medium-up--one-fifth ">
           <div class="product-value--content text-center">
             <div class="default">
-              <img src="//cdn.shopify.com/s/files/1/0792/4197/files/5_aec1a47a-102f-41bc-a879-dd6a01bf3b35.png?v=1614305960" alt="" />
+              <img src="{{ 'icon-store.png' | asset_url }}" alt="EASY & SAFE PAYMENT" />
               <p></p>
             </div>
             <div class="hover"><p>EASY & SAFE PAYMENT</p></div>
@@ -119,3 +121,5 @@
         }, 100);    
       }
     </script>
+
+<script src="{{ 'fader-icons.js' | asset_url }}" defer="defer"></script>
